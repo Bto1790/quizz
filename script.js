@@ -274,8 +274,8 @@ let insertQuizz = function () {
         </ul>
        
         <div class='margin_bottom_32px'>
-        <h2>Nota final : <span id='nota'></span></h2>
-<h2>Total preguntas : <span id='que_asked'>0</span>/${arrayPreguntas.length}</h2>
+        <h2>Score : <span id='nota'></span></h2>
+<h2>Answered : <span id='que_asked'>0</span>/${arrayPreguntas.length}</h2>
         </div>
              
 <button id='restratQuizz' type='button'>Restart Quizz</button>
