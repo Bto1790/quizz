@@ -1,0 +1,370 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+
+/* GENERAL GUIDELINES -------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+:root {
+    --tiza-blanca: #F5F5F5;
+    --tiza-verde: #A8D5A2;
+    --tiza-roja: #F28C8C;
+    --tiza-celeste: #D6A2E8;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(0.3rem); 
+    font-size: 1.8rem;
+    font-family: 'Rock Salt', sans-serif;
+    font-weight: bold;
+    height: 100%;
+}
+
+.h1{
+font-size: 2.4rem;
+}
+
+.container{
+    min-width: 90%;
+    max-width: 14.4rem;
+    height: 90%;
+    min-height: 90vh;
+}
+
+.pizarra_border{
+    background-image: url('images/madera.jpg');
+    background-size: cover;
+    background-clip: padding-box;
+    height: 100%;
+    min-width: 100%;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+
+.pizarra_body {
+    background-image: url('images/pizarra.jpg');
+    background-size: cover;
+    background-clip: padding-box;
+    color: var(--tiza-blanca);
+    padding: 4rem;  
+    border-radius: 3px;
+    width: calc(100% - 70px);
+    z-index: 2;
+    height: calc(100% - 70px);
+    margin: auto;
+    overflow: auto;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.menu{
+    height: 100%;
+}
+
+.container_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a {
+    all: unset;
+    text-decoration: none;
+    inherits: false;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--tiza-celeste);
+}
+
+
+.ul_horiz {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 6.4rem;
+}
+
+
+#edit{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    overflow: auto;
+}
+
+
+.edit_cont{
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+}
+
+
+
+#edit::-webkit-scrollbar {
+  display: none;
+}
+
+
+#edit {
+  scrollbar-width: none; 
+}
+
+
+#edit {
+  -ms-overflow-style: none;}
+
+
+
+
+
+.edit_cont-grid-nav{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+
+.ul_vertical{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 2.4rem;
+    margin-bottom: 6.4rem;
+}
+
+
+.edit_cont-grid-answ{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.edit_cont-grid-answ-span{
+    width: 20px;
+    height: 1px;
+}
+
+.font_size-normal{
+    font-size: 1.8rem;
+}
+
+.verde{
+    color: var(--tiza-verde);
+}
+
+.rojo{
+    color: var(--tiza-roja);
+}
+
+.space_between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+     list-style-type: none;
+     width: 100%;
+}
+
+.margin_bottom_16px{
+    margin-bottom: 1.6rem;
+}
+.margin_bottom_32px{
+    margin-bottom: 3.2rem;
+}
+.margin_bottom_64px{
+    margin-bottom: 6.4rem;
+}
+.margin_bottom_128px{
+    margin-bottom: 12.8rem;
+}
+
+
+
+.create_question{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  width: 100%; 
+}
+
+.form-row input {
+  flex: 1;                
+  width: 100%;   
+  background: transparent; 
+  border: none;           
+  outline: none;           
+  font: inherit;           
+  color: inherit;            
+
+}
+
+.form-row:not(:last-child){
+    margin-bottom: 1.6rem;
+}
+
+.radio_container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input[type="radio"] {
+  accent-color: var(--tiza-roja); 
+}
+
+.saveButton{
+ display: flex;
+ justify-content: center;
+}
+
+button {
+
+all: unset;        
+  cursor: pointer;  
+  border: 2px solid var(--tiza-blanca); 
+  padding: 2.4rem 6.4rem;
+  transition: all 0.2s ease;
+
+}
+
+button:hover{
+color: var(--tiza-celeste);
+border-color: var(--tiza-celeste); 
+};
+
+.show{
+    display: block;
+}
+
+.hide{
+    display:none;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+   list-style-type: none; 
+}
+
+
+.quizz_questions{
+gap:12.8rem;
+}
+
+.ul_question{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.li_question{
+    width: 100%;
+}
+
+.button_question{
+   width: 100%;
+   padding: 1.2rem 0;
+   text-align: center;
+}
+
+.correct{
+    color: var(--tiza-verde);
+    border-color: var(--tiza-verde);
+}
+.wrong{
+    color: var(--tiza-roja);
+    border-color: var(--tiza-roja);
+}
+
+
+.unpressable-div {
+  pointer-events: none; 
+  opacity: 0.6;         
+}
+
+.navB{
+    border-bottom: 2px solid var(--tiza-blanca);
+}
+
+
+
+
+
+
